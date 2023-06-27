@@ -1,7 +1,6 @@
 import React from 'react'
 
 // New components
-import { Demo } from './mae_web/demo'
 import { Header } from './mae_web/components/Header'
 import { Tab } from './mae_web/components/Tab'
 import { Modal } from './mae_web/components/Modal'
@@ -41,7 +40,6 @@ const Components = {
   hook: (props) => <Hook {...props} />,
 
   // mae-web-kit
-  demo: (props) => <Demo {...props} />,
   header: (props) => <Header {...props} />,
   tab: (props) => <Tab {...props} />,
   showModal: (props) => <Modal {...props} />,
