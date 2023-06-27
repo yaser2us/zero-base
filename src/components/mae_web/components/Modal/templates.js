@@ -1,9 +1,9 @@
 import React from "react";
-import ShowModalDefault from "./ShowModalDefault";
+import ModalDefault from "./ModalDefault";
 
 
 const TemplateList = {
-    '': (props) => <ShowModalDefault {...props} />,
+    '': (props) => <ModalDefault {...props} />,
 };
 
 export default TemplateList;

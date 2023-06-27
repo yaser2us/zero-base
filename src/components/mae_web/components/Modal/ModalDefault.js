@@ -4,15 +4,14 @@ import { Block } from "../../../@vb/components/Block";
 // import "../../styles.css";
 import "./index.scss"
 
-const ShowModalDefault = (props) => {
+const ModalDefault = (props) => {
 
   const { item } = props;
 
   // Not the best way to do it, would love opinion from the team
-  const { label = "", header = "", extra } = item;
-  const { modalContent } = extra || {};
+  const { header = "", label = "", extra = {} } = item;
+  const { modalContent } = extra;
   const { title = "", content = "", confirmText = "Okay" } = modalContent;
-
 
   return (
     <Block
@@ -39,4 +38,4 @@ const ShowModalDefault = (props) => {
   );
 };
 
-export default ShowModalDefault
+export default ModalDefault
