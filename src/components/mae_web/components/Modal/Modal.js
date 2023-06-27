@@ -1,6 +1,6 @@
 import TemplateList from "./templates";
 
-const ShowModal = (props) => {
+const Modal = (props) => {
     //Access to main props
     //Injected at runtime
     const { item } = props;
@@ -13,4 +13,4 @@ const ShowModal = (props) => {
     return (TemplateList[templateName] && TemplateList[templateName](props)) || null;
 };
 
-export default ShowModal;
+export default Modal;
