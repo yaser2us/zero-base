@@ -1,32 +1,54 @@
 import React from 'react'
 
+// New components
+import { Header } from './mae_web/components/Header'
+import { Tab } from './mae_web/components/Tab'
+import { Modal } from './mae_web/components/Modal'
+import { Card } from './mae_web/components/Card'
+import { BoxTopBottom } from './mae_web/components/Container'
+import { List } from './mae_web/components/List'
+import { Result } from './mae_web/components/Result'
+import { Wallet } from './mae_web/components/Wallet'
+
+// Reuse components
+import { Radio } from './@vb/components/Radio'
+
+// Original components
 import { Button } from './button'
 import { Checkbox } from './checkbox'
 import { Fieldset } from './fieldset'
 // import { Image } from "./image";
 import { Label } from './label'
-import { Radiobox } from './radiobox'
+// import { Radiobox } from './radiobox'
 import { Select } from './select'
 // import { Switch } from "./switch";
 import { Text } from './text'
 import { Hook } from "./Hook"
-import { List } from "./List"
-
+// import { List } from "./List"
 
 const Components = {
+
   // image:(props) => <Image {...props} />,
   button: (props) => <Button {...props} />,
   checkbox: (props) => <Checkbox {...props} />,
   fieldset: (props) => <Fieldset {...props} />,
   label: (props) => <Label {...props} />,
-  radiobox: (props) => <Radiobox {...props} />,
+  radiobox: (props) => <Radio {...props} />,
   select: (props) => <Select {...props} />,
   // switch: (props) => <Switch {...props} />,
   text: (props) => <Text {...props} />,
   hook: (props) => <Hook {...props} />,
-  list: (props) => <List {...props} />,
 
-  
+  // mae-web-kit
+  header: (props) => <Header {...props} />,
+  tab: (props) => <Tab {...props} />,
+  showModal: (props) => <Modal {...props} />,
+  card: (props) => <Card {...props} />,
+  // would be nicer to rename this as container
+  box: (props) => <BoxTopBottom {...props} />,
+  list: (props) => <List {...props} />,
+  result: (props) => <Result {...props} />,
+  wallet: (props) => <Wallet {...props} />
 }
 
 export const renderComponent = (type, propsItems) => {
