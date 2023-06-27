@@ -4,7 +4,12 @@ import React from 'react'
 import { Demo } from './mae_web/demo'
 import { Header } from './mae_web/components/Header'
 import { Tab } from './mae_web/components/Tab'
-import { ShowModal } from './mae_web/components/Modal'
+import { Modal } from './mae_web/components/Modal'
+import { Card } from './mae_web/components/Card'
+import { BoxTopBottom } from './mae_web/components/Container'
+import { List } from './mae_web/components/List'
+import { Result } from './mae_web/components/Result'
+import { Wallet } from './mae_web/components/Wallet'
 
 // Reuse components
 import { Radio } from './@vb/components/Radio'
@@ -20,7 +25,7 @@ import { Select } from './select'
 // import { Switch } from "./switch";
 import { Text } from './text'
 import { Hook } from "./Hook"
-import { List } from "./List"
+// import { List } from "./List"
 
 const Components = {
 
@@ -34,13 +39,18 @@ const Components = {
   // switch: (props) => <Switch {...props} />,
   text: (props) => <Text {...props} />,
   hook: (props) => <Hook {...props} />,
-  list: (props) => <List {...props} />,
 
   // mae-web-kit
   demo: (props) => <Demo {...props} />,
   header: (props) => <Header {...props} />,
   tab: (props) => <Tab {...props} />,
-  showModal: (props) => <ShowModal {...props} />
+  showModal: (props) => <Modal {...props} />,
+  card: (props) => <Card {...props} />,
+  // would be nicer to rename this as container
+  box: (props) => <BoxTopBottom {...props} />,
+  list: (props) => <List {...props} />,
+  result: (props) => <Result {...props} />,
+  wallet: (props) => <Wallet {...props} />
 }
 
 export const renderComponent = (type, propsItems) => {
