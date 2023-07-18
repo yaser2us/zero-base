@@ -1,9 +1,9 @@
 import React from "react";
 
-import CheckboxDefault from "./checkboxDefault";
+import { DefaultCheckbox } from "./Templates/DefaultCheckbox";
 
 const TemplateList = {
-    "": (props) => <CheckboxDefault {...props} />,
+  "": (props) => <DefaultCheckbox {...props} />,
 };
 
 export default TemplateList;
