@@ -1,8 +1,8 @@
 import React from "react";
-import RadioDefault from "./radioboxDefault";
+import { DefaultRadiobox } from "./Templates/DefaultRadiobox";
 
 const TemplateList = {
-    "": (props) => <RadioDefault {...props} />,
+  "": (props) => <DefaultRadiobox {...props} />,
 };
 
 export default TemplateList;

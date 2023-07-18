@@ -1,1 +1,1 @@
-export { default as Radiobox } from "./radiobox";
+export { default as Radiobox } from "./Radiobox";
