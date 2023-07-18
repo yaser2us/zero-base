@@ -1,13 +1,11 @@
 import React from "react";
 
-// import {Text} from 'react-native';
-// import {getStyle} from '../tailwind';
-import LabelDefault from "./labelDefault";
-import LabelLeft from "./labelLeft";
+import { DefaultLabel } from "./Templates/DefaultLabel";
+import { LeftLabel } from "./Templates/LeftLabel";
 
 const TemplateList = {
-    "": (props) => <LabelDefault {...props} />,
-    "labelLeft": (props) => <LabelLeft {...props} />,
+  "": (props) => <DefaultLabel {...props} />,
+  leftLabel: (props) => <LeftLabel {...props} />,
 };
 
 export default TemplateList;
