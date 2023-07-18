@@ -1,14 +1,12 @@
 import React from "react";
 import { Button, Modal } from "antd-mobile";
-import { DefaultBlock as Block } from "../../../../components/Block/Templates/DefaultBlock";
+import { DefaultBlock as Block } from "components/Block/Templates/DefaultBlock";
 
 import "./DefaultModal.scss";
 
 const DefaultModal = (props) => {
   const { item } = props;
-
-  // Not the best way to do it, would love opinion from the team
-  const { header = "", label = "", extra = {} } = item;
+  const { header = "", label = "", extra = {} } = item || {};
   const { modalContent } = extra;
   const { title = "", content = "", confirmText = "Okay" } = modalContent;
 

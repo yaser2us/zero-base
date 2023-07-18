@@ -1,12 +1,11 @@
 import React from "react";
-import { DefaultBlock as Block } from "../../../Block/Templates/DefaultBlock";
+import { DefaultBlock as Block } from "components/Block/Templates/DefaultBlock";
 
 import "./DefaultBox.scss";
 
 const DefaultBox = (props) => {
-  // const { title, amount,tooltip } = props
   const { item } = props;
-  const { header, description, tooltip = "" } = item;
+  const { header, description, tooltip = "" } = item || {};
 
   return (
     <div

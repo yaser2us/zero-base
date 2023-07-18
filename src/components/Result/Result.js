@@ -1,16 +1,8 @@
-import React from "react";
-
 import TemplateList from "./templates";
 
 const Result = (props) => {
-  //Access to main props
-  //Injected at runtime
   const { item } = props;
-
-  //Always check to not render with error ;)
-  if (item === undefined) return null;
-
-  const { templateName = "" } = item;
+  const { templateName = "" } = item || {};
   //Access to all props that introduced in element.
   return (
     (TemplateList[templateName] && TemplateList[templateName](props)) || null

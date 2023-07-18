@@ -1,31 +1,14 @@
 import React from "react";
 import { Input } from "antd-mobile";
-import Block from "../../../block";
-import Error from "../../../error";
-import { getStyle } from "../../../tailwind";
+import Block from "components/block";
+import Error from "components/error";
+import { getStyle } from "components/tailwind";
 
 const DefaultText = (props) => {
-  //Access to main props
-  //Injected at runtime
-  const { name, item, child, field, error, sharedItems } = props;
-
-  //Always check to not render with error ;)
-  if (item === undefined) return null;
-  const {
-    theme = "",
-    tooltip = "",
-    label = "",
-    placeholder = "",
-    description = "",
-    editable = true,
-    prefix = "",
-    multiline = true,
-    disabled = null,
-  } = item;
+  const { name, item, field, error } = props;
+  const { theme = "", tooltip = "", label = "", placeholder = "" } = item || {};
   const { value, onChange } = field;
 
-  // const isWatch = disabled && sharedItems?.getValues(disabled.slice(1, -1));
-  //Access to all props that introduced in element.
   return (
     <Block
       title={label}

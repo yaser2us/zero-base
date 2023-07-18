@@ -1,7 +1,7 @@
 import React from "react";
 import "./QuickActionCard.scss";
 
-import QRPay from "../../../../assets/QRPay.svg";
+import QRPay from "assets/QRPay.svg";
 
 const QuickActionCard = (props) => {
   const { item } = props;

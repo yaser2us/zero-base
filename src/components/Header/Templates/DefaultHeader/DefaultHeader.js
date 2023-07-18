@@ -1,9 +1,9 @@
 import React from "react";
 import Icon from "@ant-design/icons";
 
-import { BackSvg } from "../../../../assets/Icon/BackSvg";
-import { CloseSvg } from "../../../../assets/Icon/CloseSvg";
-import { ChatSvg } from "../../../../assets/Icon/ChatSvg";
+import { BackSvg } from "assets/Icon/BackSvg";
+import { CloseSvg } from "assets/Icon/CloseSvg";
+import { ChatSvg } from "assets/Icon/ChatSvg";
 
 import "./Header.scss";
 

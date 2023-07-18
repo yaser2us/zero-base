@@ -1,6 +1,5 @@
 import React from "react";
-
-import { getStyle } from "../../../tailwind";
+import { getStyle } from "components/tailwind";
 
 const DEFAULT = {
   fontSize: 14,
@@ -10,26 +9,19 @@ const DEFAULT = {
 };
 
 const LeftLabel = (props) => {
-  //Access to main props
-  //Injected at runtime
   const { item, managedCallback } = props;
-
-  //Always check to not render with error ;)
-  if (item === undefined) return null;
-
   const {
     action,
     theme = "",
     label = "",
     header = "",
     description = "",
-  } = item;
+  } = item || {};
 
   const onPress = () => {
     managedCallback({ item });
   };
-  console.log("LeftLabel", props);
-  //Access to all props that introduced in element.
+
   if (header?.length > 0 && description?.length > 0) {
     return (
       <>
@@ -42,7 +34,6 @@ const LeftLabel = (props) => {
             textAlign: "left",
             ...getStyle(theme),
           }}
-          // onPress={onPress}
         >
           {header}
         </div>
@@ -57,7 +48,6 @@ const LeftLabel = (props) => {
               textAlign: "left",
               ...getStyle(theme),
             }}
-            // onPress={onPress}
           >
             {description}
           </div>
@@ -66,9 +56,9 @@ const LeftLabel = (props) => {
     );
   }
   return action ? (
-    <a style={{ ...DEFAULT, ...getStyle(theme) }} onPress={onPress}>
+    <div style={{ ...DEFAULT, ...getStyle(theme) }} onPress={onPress}>
       {label}
-    </a>
+    </div>
   ) : (
     <div style={{ ...DEFAULT, ...getStyle(theme) }}>{label}</div>
   );

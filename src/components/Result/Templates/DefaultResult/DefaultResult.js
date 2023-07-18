@@ -3,14 +3,14 @@ import { Result as AntdResult } from "antd-mobile";
 import Icon from "@ant-design/icons";
 import PropTypes from "prop-types";
 
-import { ResultFailedSvg } from "../../../../assets/Icon/ResultFailedSvg";
-import { ResultSuccessSvg } from "../../../../assets/Icon/ResultSuccessSvg";
+import { ResultFailedSvg } from "assets/Icon/ResultFailedSvg";
+import { ResultSuccessSvg } from "assets/Icon/ResultSuccessSvg";
 
 import "./DefaultResult.scss";
 
 const DefaultResult = (props) => {
   const { item } = props;
-  const { header, description, extra = {} } = item;
+  const { header, description, extra = {} } = item || {};
   const { status, icon = "" } = extra;
 
   const ResultFailedIcon = (props) => (

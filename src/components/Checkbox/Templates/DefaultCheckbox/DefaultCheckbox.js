@@ -1,20 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Checkbox } from "antd-mobile";
-import Block from "../../../block";
-import Error from "../../../error";
-import Tooltip from "../../../tooltip";
-import { getStyle } from "../../../tailwind";
+import Block from "components/block";
+import Error from "components/error";
+import Tooltip from "components/tooltip";
+import { getStyle } from "components/tailwind";
 
 const DefaultCheckbox = (props) => {
-  //Access to main props
-  //Injected at runtime
   const { item, field, managedCallback } = props;
-
-  //Always check to not render with error ;)
-  if (item === undefined) return null;
-
-  const { theme = "", tooltip = "", label = "", action } = item;
-  const { value, onChange } = field;
+  const { theme = "", tooltip = "", label = "", action } = item || {};
+  const { value, onChange } = field || {};
 
   const onValueChange = () => {
     if (action) {
@@ -23,7 +17,7 @@ const DefaultCheckbox = (props) => {
     }
     onChange(!value);
   };
-  //Access to all props that introduced in element.
+
   return (
     <Block style={getStyle(theme)}>
       <Checkbox value={value} onChange={onValueChange}>

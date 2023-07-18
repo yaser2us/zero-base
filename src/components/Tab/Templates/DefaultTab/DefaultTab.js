@@ -1,17 +1,13 @@
-import React, { Children, useRef, useState } from "react";
-import { DefaultBlock as Block } from "../../../Block/Templates/DefaultBlock";
+import React, { useRef, useState } from "react";
+import { DefaultBlock as Block } from "components/Block/Templates/DefaultBlock";
 import { Tabs, Swiper } from "antd-mobile";
 
 import "./DefaultTab.scss";
 
 const DefaultTab = (props) => {
   const { item } = props;
-
-  // May require code cleanup. Need to conduct discussion with team on the placement of the tabItems
-  const { extra } = item;
-  const { tabItems } = extra;
-  const items = tabItems;
-
+  const { extra } = item || {};
+  const { tabItems } = extra || {};
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -19,13 +15,13 @@ const DefaultTab = (props) => {
     <Block padding="0">
       <Tabs
         className="navigationTabs"
-        activeKey={items[activeIndex].key}
+        activeKey={tabItems[activeIndex].key}
         onChange={(key) => {
-          const index = items.findIndex((item) => item.key === key);
+          const index = tabItems.findIndex((item) => item.key === key);
           setActiveIndex(index);
         }}
       >
-        {items.map((item) => (
+        {tabItems.map((item) => (
           <Tabs.Tab key={item.key} title={item.title} />
         ))}
       </Tabs>
@@ -40,7 +36,7 @@ const DefaultTab = (props) => {
           setActiveIndex(index);
         }}
       >
-        {items.map((item) => (
+        {tabItems.map((item) => (
           <Swiper.Item>
             <div
               style={{

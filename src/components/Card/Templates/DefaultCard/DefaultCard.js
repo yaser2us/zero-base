@@ -1,12 +1,12 @@
 import React from "react";
-import { DefaultBlock as Block } from "../../../../components/Block/Templates/DefaultBlock";
+import { DefaultBlock as Block } from "components/Block/Templates/DefaultBlock";
 import { Card, Toast } from "antd-mobile";
 
 import "./DefaultCard.scss";
 
 const DefaultCard = (props) => {
   const { item } = props;
-  const { header, description, bgImage = "" } = item;
+  const { header, description, bgImage = "" } = item || {};
 
   const onClick = () => {
     Toast.show("ASNB");

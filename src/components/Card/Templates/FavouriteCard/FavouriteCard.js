@@ -1,11 +1,10 @@
 import React from "react";
-import JomPay from "../../../../assets/JomPay.svg";
+import JomPay from "assets/JomPay.svg";
 import "./FavouriteCard.scss";
 
 const FavouriteCard = (props) => {
   const { item } = props;
-  const { extra = {}, header = "", description = "", label = "" } = item;
-  const { isList = true } = extra;
+  const { header = "", description = "", label = "" } = item || {};
 
   return (
     <div className="isList">

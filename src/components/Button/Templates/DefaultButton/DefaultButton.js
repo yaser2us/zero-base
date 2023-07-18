@@ -4,16 +4,7 @@ import "./DefaultButton.scss";
 
 const DefaultButton = (props) => {
   const { item } = props;
-
-  const {
-    label = "",
-    children,
-    disabled,
-    className,
-    hasIcon,
-    managedCallback,
-  } = item;
-
+  const { label = "", children, disabled, className, hasIcon } = item || {};
   const onClick = () => {};
   return (
     <AntdButton

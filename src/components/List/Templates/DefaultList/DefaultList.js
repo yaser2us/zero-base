@@ -3,7 +3,7 @@ import "./DefaultList.scss";
 
 const DefaultList = (props) => {
   const { item } = props;
-  const { titleClassName, contentClassName, extra = {} } = item;
+  const { titleClassName, contentClassName, extra = {} } = item || {};
   const { items } = extra;
 
   return (

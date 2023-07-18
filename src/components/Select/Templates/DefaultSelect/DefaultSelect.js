@@ -1,26 +1,16 @@
 import React, { useState } from "react";
 import { Button, Picker, Space } from "antd-mobile";
 import { DownOutline } from "antd-mobile-icons";
-import Block from "../../../block";
-import Error from "../../../error";
-import { getStyle } from "../../../tailwind";
+import Block from "components/block";
+import Error from "components/error";
+import { getStyle } from "components/tailwind";
 
 const DefaultSelect = (props) => {
-  //Access to main props
   const [visible, setVisible] = useState(false);
+  const { item, field } = props;
 
-  //Injected at runtime
-  const { item, field, managedCallback } = props;
-
-  //Always check to not render with error ;)
-  if (item === undefined) return null;
-
-  const { value, onChange } = field;
-  const { theme = "", label = "", tooltip = "", options, placeholder } = item;
-
-  const onSelect = (val, extend) => {
-    onChange({ val });
-  };
+  const { value, onChange } = field || {};
+  const { theme = "", label = "", tooltip = "", options = {} } = item || {};
 
   const onClick = () => setVisible(true);
   const onClose = () => setVisible(false);

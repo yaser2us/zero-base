@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { DefaultTooltip as Tooltip } from "../../../Tooltip/Templates/DefaultTooltip";
+import { DefaultTooltip as Tooltip } from "components/Tooltip/Templates/DefaultTooltip";
 
 const DefaultBlock = (props) => {
   const {

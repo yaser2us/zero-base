@@ -1,5 +1,5 @@
 import React from "react";
-import { Block } from "../Block";
+import { Block } from "components/Fieldset/Templates/Block";
 import "./ScreenLayout.scss";
 
 const ScreenLayout = (props) => (

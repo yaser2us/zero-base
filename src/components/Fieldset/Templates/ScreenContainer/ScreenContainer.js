@@ -1,5 +1,5 @@
 import React from "react";
-import { getStyle } from "../../../tailwind";
+import { getStyle } from "components/tailwind";
 
 const ScreenContainer = (props) => (
   <div

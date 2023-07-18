@@ -1,13 +1,13 @@
 import React from "react";
 
 import Icon from "@ant-design/icons";
-import { WalletSvg } from "../../../../assets/Icon/WalletSvg";
+import { WalletSvg } from "assets/Icon/WalletSvg";
 
 import "./DefaultWallet.scss";
 
 const DefaultWallet = (props) => {
   const { item } = props;
-  const { header, description } = item;
+  const { header, description } = item || {};
   const WalletIcon = (props) => <Icon component={WalletSvg} {...props} />;
 
   return (
