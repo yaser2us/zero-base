@@ -1,12 +1,9 @@
 import React from "react";
 
-// import {Text} from 'react-native';
-// import {getStyle} from '../tailwind';
-import SelectDefault from "./selectDefault";
+import { DefaultSelect } from "./Templates/DefaultSelect";
 
 const TemplateList = {
-    "": (props) => <SelectDefault {...props} />,
-    "SelectWithField": (props) => <SelectDefault {...props} />,
+  "": (props) => <DefaultSelect {...props} />,
 };
 
 export default TemplateList;
