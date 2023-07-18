@@ -1,10 +1,9 @@
 import React from "react";
 
-import TextDefault from "./textDefault";
+import { DefaultText } from "./Templates/DefaultText";
 
 const TemplateList = {
-    "": (props) => <TextDefault {...props} />,
-    "search": (props) => <TextDefault {...props} />,
+  "": (props) => <DefaultText {...props} />,
 };
 
 export default TemplateList;
