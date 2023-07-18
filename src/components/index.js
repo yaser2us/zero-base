@@ -1,34 +1,31 @@
-import React from 'react'
+import React from "react";
+
+// Components Cleanup
+import { Button } from "./Button";
+import { Header } from "./Header";
+import { Fieldset } from "./Fieldset";
+import { Checkbox } from "./Checkbox";
 
 // New components
-import { Header } from './mae_web/components/Header'
-import { Tab } from './mae_web/components/Tab'
-import { Modal } from './mae_web/components/Modal'
-import { Card } from './mae_web/components/Card'
-import { BoxTopBottom } from './mae_web/components/Container'
-import { List } from './mae_web/components/List'
-import { Result } from './mae_web/components/Result'
-import { Wallet } from './mae_web/components/Wallet'
+import { Tab } from "./mae_web/components/Tab";
+import { Modal } from "./mae_web/components/Modal";
+import { Card } from "./mae_web/components/Card";
+import { BoxTopBottom } from "./mae_web/components/Container";
+import { List } from "./mae_web/components/List";
+import { Result } from "./mae_web/components/Result";
+import { Wallet } from "./mae_web/components/Wallet";
 
 // Reuse components
-import { Radio } from './@vb/components/Radio'
+import { Radio } from "./@vb/components/Radio";
 
 // Original components
-import { Button } from './button'
-import { Checkbox } from './checkbox'
-import { Fieldset } from './fieldset'
-// import { Image } from "./image";
-import { Label } from './label'
-// import { Radiobox } from './radiobox'
-import { Select } from './select'
-// import { Switch } from "./switch";
-import { Text } from './text'
-import { Hook } from "./Hook"
-// import { List } from "./List"
+
+import { Label } from "./label";
+import { Select } from "./select";
+import { Text } from "./text";
+import { Hook } from "./Hook";
 
 const Components = {
-
-  // image:(props) => <Image {...props} />,
   button: (props) => <Button {...props} />,
   checkbox: (props) => <Checkbox {...props} />,
   fieldset: (props) => <Fieldset {...props} />,
@@ -48,35 +45,35 @@ const Components = {
   box: (props) => <BoxTopBottom {...props} />,
   list: (props) => <List {...props} />,
   result: (props) => <Result {...props} />,
-  wallet: (props) => <Wallet {...props} />
-}
+  wallet: (props) => <Wallet {...props} />,
+};
 
 export const renderComponent = (type, propsItems) => {
   // find the respective type from dictionary
-  const SelectedComponent = Components && Components[type]
+  const SelectedComponent = Components && Components[type];
   // to ensure it is not undefined
   // prevent rendering error
-  if (SelectedComponent === undefined) return null
+  if (SelectedComponent === undefined) return null;
 
   // return component with container together
-  return SelectedComponent({ ...propsItems })
+  return SelectedComponent({ ...propsItems });
   //return renderContainer(selectedComponent({ ...propsItems }))
-}
+};
 
 // const renderContainer = (children) => <View style={{ flex: 1 }}>{children}</View>;
 
 export const validationResolver = {
   noteq: async (item, value) => {
-    return !(value === item.value)
+    return !(value === item.value);
     // return (value !== "" && !item.value.includes(value)) || false;
   },
   eq: async (item, value) => {
-    return value === item.value
+    return value === item.value;
   },
   exist: async (item, value) => {
-    return value !== ''
+    return value !== "";
   },
   eq1: async (item, value) => {
-    return (value !== '' && item.value.includes(value)) || false
-  }
-}
+    return (value !== "" && item.value.includes(value)) || false;
+  },
+};
