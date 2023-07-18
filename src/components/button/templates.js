@@ -1,18 +1,11 @@
 import React from "react";
 
-import ButtonDefault from "./buttonDefault";
-import ButtonIconDefault from "./buttonIconDefault";
-// import ButtonLeftDefault from "./buttonLeftDefault";
-// import ButtonPrimaryDefault from "./buttonPrimaryDefault";
-// import ButtonRightDefault from "./buttonRightDefault";
+import { DefaultButton } from "./Templates/DefaultButton";
+import { IconButton } from "./Templates/IconButton";
 
 const TemplateList = {
-    // leftButton: props => <ButtonLeftDefault {...props} />,
-    // rightButton: props => <ButtonRightDefault {...props} />,
-    buttonIcon: (props) => <ButtonIconDefault {...props} />,
-    // buttonPrimary: (props) => <ButtonPrimaryDefault {...props} />,
-    // "": (props) => <ButtonPrimaryDefault {...props} />,
-    '': (props) => <ButtonDefault {...props} />,
+  "": (props) => <DefaultButton {...props} />,
+  iconButton: (props) => <IconButton {...props} />,
 };
 
 export default TemplateList;
