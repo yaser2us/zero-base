@@ -1,5 +1,5 @@
 import React, { Children, useRef, useState } from "react";
-import { Block } from "../../../@vb/components/Block";
+import { DefaultBlock as Block } from "../../../Block/Templates/DefaultBlock";
 import { Tabs, Swiper } from "antd-mobile";
 
 import "./DefaultTab.scss";
