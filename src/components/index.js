@@ -5,24 +5,17 @@ import { Button } from "./Button";
 import { Header } from "./Header";
 import { Fieldset } from "./Fieldset";
 import { Checkbox } from "./Checkbox";
-
-// New components
-import { Tab } from "./mae_web/components/Tab";
-import { Modal } from "./mae_web/components/Modal";
-import { Card } from "./mae_web/components/Card";
-import { BoxTopBottom } from "./mae_web/components/Container";
-import { List } from "./mae_web/components/List";
-import { Result } from "./mae_web/components/Result";
-import { Wallet } from "./mae_web/components/Wallet";
-
-// Reuse components
-import { Radio } from "./@vb/components/Radio";
-
-// Original components
-
-import { Label } from "./label";
-import { Select } from "./select";
-import { Text } from "./text";
+import { Card } from "./Card";
+import { Tab } from "./Tab";
+import { Wallet } from "./Wallet";
+import { Modal } from "./Modal";
+import { Radiobox } from "./Radiobox";
+import { List } from "./List";
+import { Box } from "./Box";
+import { Result } from "./Result";
+import { Label } from "./Label";
+import { Text } from "./Text";
+import { Select } from "./Select";
 import { Hook } from "./Hook";
 
 const Components = {
@@ -30,19 +23,15 @@ const Components = {
   checkbox: (props) => <Checkbox {...props} />,
   fieldset: (props) => <Fieldset {...props} />,
   label: (props) => <Label {...props} />,
-  radiobox: (props) => <Radio {...props} />,
+  radiobox: (props) => <Radiobox {...props} />,
   select: (props) => <Select {...props} />,
-  // switch: (props) => <Switch {...props} />,
   text: (props) => <Text {...props} />,
   hook: (props) => <Hook {...props} />,
-
-  // mae-web-kit
   header: (props) => <Header {...props} />,
   tab: (props) => <Tab {...props} />,
-  showModal: (props) => <Modal {...props} />,
+  modal: (props) => <Modal {...props} />,
   card: (props) => <Card {...props} />,
-  // would be nicer to rename this as container
-  box: (props) => <BoxTopBottom {...props} />,
+  box: (props) => <Box {...props} />,
   list: (props) => <List {...props} />,
   result: (props) => <Result {...props} />,
   wallet: (props) => <Wallet {...props} />,
