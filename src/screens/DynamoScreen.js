@@ -81,7 +81,7 @@ const DynamoScreen = () => {
         //     // updateAuthorisation(response.data)
         // })
 
-        fetchDynamoJson("https://dynamobff.maybanksandbox.com/forms/6260cf97b3eab4001c05a13a");
+        fetchDynamoJson("https://dynamobff.maybanksandbox.com/forms/649a6299013c34001c18e6f6");
 
 
     }, []);
