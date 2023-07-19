@@ -1,5 +1,1 @@
-import List from "./List"
-
-export {
-    List
-}
+export { default as List } from "./List";

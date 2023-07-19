@@ -1,3 +1,3 @@
-import Hook from "./hook";
+import Hook from "./Hook";
 
 export { Hook };
